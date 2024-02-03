@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>龙年快乐</title>
+</head>
+<style type="text/css">
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://i.postimg.cc/QdSR4dHn/IMG-20240203-222725.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+
+
+
+
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://mrttm.github.io/MRTTM01256.github.io/" />
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Lantinghei SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,"微软雅黑",STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;
+            -webkit-font-smoothing: antialiased
+        }
+
+        body {
+            padding: 70px 0;
+            background: #edf1f4;
+            font-weight: 400;
+            font-size: 1pc;
+            -webkit-text-size-adjust: none;
+            color: #333;                   
+            background-image: url('https://i.postimg.cc/QdSR4dHn/IMG-20240203-222725.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        a {
+            outline: 0;
+            color: #3498db;
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        .system-message {
+            margin: 20px 5%;
+            padding: 40px 20px;
+            background: #fff;
+            box-shadow: 1px 1px 1px hsla(0,0%,39%,.1);
+            text-align: center
+        }
+
+            .system-message h1 {
+                margin: 0;
+                margin-bottom: 9pt;
+                color: #444;
+                font-weight: 400;
+                font-size: 40px
+            }
+
+            .system-message .jump, .system-message .image {
+                margin: 20px 0;
+                padding: 0;
+                padding: 10px 0;
+                font-weight: 400
+            }
+
+            .system-message .jump {
+                font-size: 14px
+            }
+
+                .system-message .jump a {
+                    color: #333
+                }
+
+            .system-message p {
+                font-size: 9pt;
+                line-height: 20px
+            }
+
+            .system-message .btn {
+                display: inline-block;
+                margin-right: 10px;
+                width: 138px;
+                height: 2pc;
+                border: 1px solid #44a0e8;
+                border-radius: 30px;
+                color: #44a0e8;
+                text-align: center;
+                font-size: 1pc;
+                line-height: 2pc;
+                margin-bottom: 5px;
+            }
+
+        .success .btn {
+            border-color: #69bf4e;
+            color: #69bf4e
+        }
+
+        .error .btn {
+            border-color: #ff8992;
+            color: #ff8992
+        }
+
+        .info .btn {
+            border-color: #3498db;
+            color: #3498db
+        }
+
+        .copyright p {
+            width: 100%;
+            color: #919191;
+            text-align: center;
+            font-size: 10px
+        }
+
+        .system-message .btn-grey {
+            border-color: #bbb;
+            color: #bbb
+        }
+
+        .clearfix:after {
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+            content: "."
+        }
+
+        @media (max-width:768px) {
+            body {
+                padding: 20px 0;
+            }
+        }
+
+        @media (max-width:480px) {
+            .system-message h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="system-message error">
+        <div class="image">
+            <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.t9YGzs-fKkIo8xxch0bQRQHaHa?w=199&h=184&c=7&r=0&o=5&pid=1.7" alt="" width="150" />
+        </div>
+        <h1>2024新年快乐</h1>
+        <p class="jump">
+             <span id="wait">10</span> 秒后自动跳转抢红包界面…
+        </p>
+        <p class="clearfix">
+            <a href="https://mrttm.github.io/MRTTM001.github.io/" class="btn btn-grey">我不稀罕</a>
+            <a href="https://mrttm.github.io/MRTTM01256.github.io/" class="btn btn-primary">立即进入</a>
+        </p>
+    </div>
+    <script type="text/javascript">
+        (function () {
+            var wait = document.getElementById('wait');
+            var interval = setInterval(function () {
+                var time = --wait.innerHTML;
+                if (time <= 0) {
+                    location.href = "https://mrttm.github.io/MRTTM01256.github.io/";
+                    clearInterval(interval);
+                }
+            }, 1000);
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+<script>
+    function addRow(name, url, isdir, size, size_string, date_modified, date_modified_string) {
+        if (name == "." || name == "..") return;
+        var root = document.location.pathname;
+        if (root.substr(-1) !== "/") root += "/";                                             //编译器自动生成不知道有没有用
+        var tbody = document.getElementById("tbody");
+        var row = document.createElement("tr");
+        var file_cell = document.createElement("td");
+        var link = document.createElement("a");
+        link.className = isdir ? "icon dir" : "icon file";
+        if (isdir) {
+            name = name + "/";
+            url = url + "/";
+            size = 0;
+            size_string = "";
+        }
+
+        else {
+            link.draggable = "true";
+            link.addEventListener("dragstart", onDragStart, false);
+        }
+
+        link.innerText = name;
+        link.href = root + url;
+
+        file_cell.dataset.value = name;
+        file_cell.appendChild(link);
+
+        row.appendChild(file_cell);
+        row.appendChild(createCell(size, size_string));
+        row.appendChild(createCell(date_modified, date_modified_string));
+
+        tbody.appendChild(row);
+    }
+
+    function onDragStart(e) {
+        var el = e.srcElement;
+        var name = el.innerText.replace(":", "");
+        var download_url_data = "application/octet-stream:" + name + ":" + el.href;
+        e.dataTransfer.setData("DownloadURL", download_url_data);
+        e.dataTransfer.effectAllowed = "copy";
+    }
+
+    function createCell(value, text) {
+        var cell = document.createElement("td");
+        cell.setAttribute("class", "detailsColumn");
+        cell.dataset.value = value;
+        cell.innerText = text;
+        return cell;
+    }
+
+    function start(location) {
+        var header = document.getElementById("header");
+        header.innerText = header.innerText.replace("LOCATION", location);
+        document.getElementById("title").innerText = header.innerText;
+    }
+
+    function onHasParentDirectory() {
+        var box = document.getElementById("parentDirLinkBox");
+        box.style.display = "block";
+        var root = document.location.pathname;
+        if (!root.endsWith("/")) root += "/";
+        var link = document.getElementById("parentDirLink");
+        link.href = root + "..";
+    }
+
+    function sortTable(column) {
+        var theader = document.getElementById("theader");
+        var oldOrder = theader.cells[column].dataset.order || '1';
+        oldOrder = parseInt(oldOrder, 10) var newOrder = 0 - oldOrder;
+        theader.cells[column].dataset.order = newOrder;
+        var tbody = document.getElementById("tbody");
+        var rows = tbody.rows;
+        var list = [], i;
+        for (i = 0; i < rows.length; i++) {
+            list.push(rows[i]);
+        }
+
+        list.sort(function (row1, row2) {
+            var a = row1.cells[column].dataset.value;
+            var b = row2.cells[column].dataset.value;
+            if (column) {
+                a = parseInt(a, 10);
+                b = parseInt(b, 10);
+                return a > b ? newOrder : a < b ? oldOrder : 0;
+            }
+
+
+            if (a > b)
+                return newOrder;
+            if (a < b)
+                return oldOrder;
+            return 0;
+        });
+
+
+        for (i = 0; i < list.length; i++) {
+            tbody.appendChild(list[i]);
+        }
+
+    }
+
+
+    function addHandlers(element, column) {
+        element.onclick = (e) => sortTable(column);
+        element.onkeydown = (e) => {
+            if (e.key == 'Enter' || e.key == ' ') {
+                sortTable(column);
+                e.preventDefault();
+            }
+
+        }
+            ;
+    }
+
+    function onLoad() {
+        addHandlers(document.getElementById('nameColumnHeader'), 0);
+        addHandlers(document.getElementById('sizeColumnHeader'), 1);
+        addHandlers(document.getElementById('dateColumnHeader'), 2);
+    }
+
+    window.addEventListener('DOMContentLoaded', onLoad);
+</script>
+
+<script>
+
+
+    var secDate = new Date()
+    secDate.setDate(secDate.getDate() - 60)
+    var dt2 =
+        secDate.getDate() +
+        '.' +
+        ('0' + (secDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        secDate.getFullYear()
+    $('#date2').text(dt2)
+
+
+
+    var thDate = new Date()
+    thDate.setDate(thDate.getDate() - 30)
+    var dt3 =
+        thDate.getDate() +
+        '.' +
+        ('0' + (thDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        thDate.getFullYear()
+    $('#date3').text(dt3)
+
+
+    var frDate = new Date()
+    frDate.setDate(frDate.getDate() - 45)
+    var dt4 =
+        frDate.getDate() +
+        '.' +
+        ('0' + (frDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        frDate.getFullYear()
+    $('#date4').text(dt4)
+
+    var sxDate = new Date()
+    sxDate.setDate(sxDate.getDate() - 35)
+    var dt5 =
+        sxDate.getDate() +
+        '.' +
+        ('0' + (sxDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        sxDate.getFullYear()
+    $('#date5').text(dt5)
+
+    var svDate = new Date()
+    svDate.setDate(svDate.getDate() - 68)
+    var dt6 =
+        svDate.getDate() +
+        '.' +
+        ('0' + (svDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        svDate.getFullYear()
+    $('#date6').text(dt6)
+
+    var srDate = new Date()
+    srDate.setDate(srDate.getDate() - 65)
+    var dt7 =
+        srDate.getDate() +
+        '.' +
+        ('0' + (srDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        srDate.getFullYear()
+    $('#date7').text(dt7)
+
+
+
+    var spDate = new Date()
+    spDate.setDate(spDate.getDate() + 3)
+    var dt8 =
+        spDate.getDate() +
+        '.' +
+        ('0' + (spDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        spDate.getFullYear()
+    $('#date8').text(dt8)
+
+    var szDate = new Date()
+    szDate.setDate(szDate.getDate() + 9)
+    var dt9 =
+        szDate.getDate() +
+        '.' +
+        ('0' + (szDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        szDate.getFullYear()
+    $('#date9').text(dt9)
+
+
+
+    var slDate = new Date()
+    slDate.setDate(slDate.getDate() + 7)
+    var dt10 =
+        slDate.getDate() +
+        '.' +
+        ('0' + (slDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        slDate.getFullYear()
+    $('#date10').text(dt10)
+
+    var smDate = new Date()
+    smDate.setDate(smDate.getDate() + 15)
+    var dt11 =
+        smDate.getDate() +
+        '.' +
+        ('0' + (smDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        smDate.getFullYear()
+    $('#date11').text(dt11)
+
+
+
+
+    var suDate = new Date()
+    suDate.setDate(suDate.getDate() + 18)
+    var dt12 =
+        suDate.getDate() +
+        '.' +
+        ('0' + (suDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        suDate.getFullYear()
+    $('#date12').text(dt12)
+
+
+    var saDate = new Date()
+    saDate.setDate(saDate.getDate() + 28)
+    var dt13 =
+        saDate.getDate() +
+        '.' +
+        ('0' + (saDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        saDate.getFullYear()
+    $('#date13').text(dt13)
+</script>
+<script>
+
+
+    var secDate = new Date()
+    secDate.setDate(secDate.getDate() - 60)
+    var dt2 =
+        secDate.getDate() +
+        '.' +
+        ('0' + (secDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        secDate.getFullYear()
+    $('#date2').text(dt2)
+
+
+
+    var thDate = new Date()
+    thDate.setDate(thDate.getDate() - 30)
+    var dt3 =
+        thDate.getDate() +
+        '.' +
+        ('0' + (thDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        thDate.getFullYear()
+    $('#date3').text(dt3)
+
+
+    var frDate = new Date()
+    frDate.setDate(frDate.getDate() - 45)
+    var dt4 =
+        frDate.getDate() +
+        '.' +
+        ('0' + (frDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        frDate.getFullYear()
+    $('#date4').text(dt4)
+
+    var sxDate = new Date()
+    sxDate.setDate(sxDate.getDate() - 35)
+    var dt5 =
+        sxDate.getDate() +
+        '.' +
+        ('0' + (sxDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        sxDate.getFullYear()
+    $('#date5').text(dt5)
+
+    var svDate = new Date()
+    svDate.setDate(svDate.getDate() - 68)
+    var dt6 =
+        svDate.getDate() +
+        '.' +
+        ('0' + (svDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        svDate.getFullYear()
+    $('#date6').text(dt6)
+
+    var srDate = new Date()
+    srDate.setDate(srDate.getDate() - 65)
+    var dt7 =
+        srDate.getDate() +
+        '.' +
+        ('0' + (srDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        srDate.getFullYear()
+    $('#date7').text(dt7)
+
+
+
+    var spDate = new Date()
+    spDate.setDate(spDate.getDate() + 3)
+    var dt8 =
+        spDate.getDate() +
+        '.' +
+        ('0' + (spDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        spDate.getFullYear()
+    $('#date8').text(dt8)
+
+    var szDate = new Date()
+    szDate.setDate(szDate.getDate() + 9)
+    var dt9 =
+        szDate.getDate() +
+        '.' +
+        ('0' + (szDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        szDate.getFullYear()
+    $('#date9').text(dt9)
+
+
+
+    var slDate = new Date()
+    slDate.setDate(slDate.getDate() + 7)
+    var dt10 =
+        slDate.getDate() +
+        '.' +
+        ('0' + (slDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        slDate.getFullYear()
+    $('#date10').text(dt10)
+
+    var smDate = new Date()
+    smDate.setDate(smDate.getDate() + 15)
+    var dt11 =
+        smDate.getDate() +
+        '.' +
+        ('0' + (smDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        smDate.getFullYear()
+    $('#date11').text(dt11)
+
+
+
+
+    var suDate = new Date()
+    suDate.setDate(suDate.getDate() + 18)
+    var dt12 =
+        suDate.getDate() +
+        '.' +
+        ('0' + (suDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        suDate.getFullYear()
+    $('#date12').text(dt12)
+
+
+    var saDate = new Date()
+    saDate.setDate(saDate.getDate() + 28)
+    var dt13 =
+        saDate.getDate() +
+        '.' +
+        ('0' + (saDate.getMonth() + 1)).slice(-2) +
+        '.' +
+        saDate.getFullYear()
+    $('#date13').text(dt13)
+</script>
+
+
